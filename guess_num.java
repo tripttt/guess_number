@@ -39,6 +39,7 @@ public class guess_num {
             if(w==1)
             {
                 winner win = new winner();
+                System.out.println("Enter the name of winner:- ");
                 win.name = br.readLine();
                 System.out.println(win.name);
             }
