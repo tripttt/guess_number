@@ -1,6 +1,12 @@
 import java.io.*;
 import java.util.Random;
+class winner
+{
+    String name;
+}
 public class guess_num {
+    InputStreamReader read = new InputStreamReader(System.in);
+    BufferedReader br = new BufferedReader(read);
     Random random = new Random();
     int n=0;
     int num=0;
@@ -30,6 +36,12 @@ public class guess_num {
                 w = w+1;
                 break;
             }
+            if(w==1)
+            {
+                winner win = new winner();
+                win.name = br.readLine();
+                System.out.println(win.name);
+            }
             System.out.println("Score is:- "+s);
             System.out.println("Number is:- "+num);
         }
@@ -38,5 +50,6 @@ public class guess_num {
     public static void main(String[] args)throws IOException {
         guess_num ob1 = new guess_num();
         ob1.gen();
+        winner win = new winner();
     }
 }
